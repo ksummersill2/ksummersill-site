@@ -12,7 +12,7 @@ import Products from './components/Products';
 import { initGA, logPageView } from './utils/analytics';
 
 // Replace this with your actual Google Analytics tracking ID
-const GA_TRACKING_ID = 'G-H8QL83DN1Y';
+const GA_TRACKING_ID = 'G-YQPJHWZ2J0';
 
 function App() {
   useEffect(() => {
