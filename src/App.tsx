@@ -9,14 +9,18 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 import BlogPage from './components/BlogPage';
 import Products from './components/Products';
-import { initGA, logPageView } from './utils/analytics';
+import { initGA, logPageView, initGoatCounter, logGoatCounterPageView } from './utils/analytics';
 
 // Replace this with your actual Google Analytics tracking ID
 const GA_TRACKING_ID = 'G-YQPJHWZ2J0';
 
+// Replace this with your GoatCounter code
+const GOAT_COUNTER_CODE = 'bF6rMoSEbwy7a7j';
+
 function App() {
   useEffect(() => {
     initGA(GA_TRACKING_ID);
+    initGoatCounter(GOAT_COUNTER_CODE);
   }, []);
 
   return (
@@ -31,6 +35,7 @@ function AppContent() {
 
   useEffect(() => {
     logPageView();
+    logGoatCounterPageView();
   }, [location]);
 
   return (
